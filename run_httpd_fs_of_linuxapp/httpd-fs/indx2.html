@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Davicom Semiconductor Inc. Demo Web Page</title> 
+<meta charset='UTF-8'>
+<link rel='icon' href='favicon.ico' type='image/x-icon'>
+<link href='style.css' rel='stylesheet' type='text/css'>
+<script>
+function changeCss(id){ 
+	var li=document.getElementsByTagName("li");
+	
+  	for(var i =0;i < li.length;i++){ 
+	li[i].style.background="";
+	}
+	document.getElementById(id).style.background="#ff6600";
+}
+
+function changeTitle(){ 
+	document.title = modname;
+}
+</script> 
+</head>
+<body onload="changeTitle()">
+<div id="wrapper">
+	<div id="header">
+		<div id="div1">
+			<h1>DAVICOM</h1>
+			<h4>-share awesome hardware-</h4>
+		</div>
+		<div id="div2"></div>
+	</div>
+  
+	<div id="body">
+		<div id="sidebar2">
+			<!-- begin categories -->
+			<ul style="border-top-width:0px;">
+				<li id="5"><a href="initialen.shtml" target="ifrPage" onclick="changeCss('5')">Current Status</a></li>
+				<li id="1"><a href="parameter.shtml" target="ifrPage" onclick="changeCss('1')">parameter</a></li>
+				<li id="2"><a href="ipconfigen.shtml" target="ifrPage" onclick="changeCss('2')">Local IP Config</a></li>
+				<li id="9"><a href="manage.shtml" target="ifrPage" onclick="changeCss('9')">Administration</a></li>
+			</ul>
+		<!-- end meta -->
+		</div>
+		<!-- BEGIN content -->
+		<iframe id="ifrPage" name="ifrPage" src="ini_cblocks2.shtml" frameborder="no"></iframe>
+		<!-- END content -->
+		<div class="break"></div>
+	</div>
+	<!-- END body -->
+	<!-- BEGIN footer -->
+	<div id="footer">
+		<div id="line">
+			<p>  Copyright &copy; 2017 &middot; DAVICOM Semiconductor
+				<div id="left">website:<a href="http://www.davicom.com.tw">www.davicom.com.tw</a></div> 
+			</p> 
+		<div>
+		
+		</div>
+		<!-- END footer -->
+		</div>
+	</div>
+<!-- END  -->
+</body> 
+</html>
